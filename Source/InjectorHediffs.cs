@@ -117,7 +117,7 @@ namespace TarkovInjectors
             while (pulseTicks >= 250 && !pawn.Dead)
             {
                 pulseTicks -= 250;
-                HediffComp_TendDuration tend = TryGetComp<HediffComp_TendDuration>();
+                HediffComp_TendDuration tend = comps == null ? null : comps.OfType<HediffComp_TendDuration>().FirstOrDefault();
                 bool stabilized = tend != null && tend.IsTended;
                 // At 0.6 initial severity, untreated overdose reaches 1.0 in ~4 game hours.
                 // A successfully tended overdose recovers in ~12 game hours.
