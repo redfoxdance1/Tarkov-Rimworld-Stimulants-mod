@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="TCI_InjectorBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>25</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>60</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <WorkToMake>800</WorkToMake>
+    </statBases>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>TarkovInjectors/Morphine</texPath>
+      <drawSize>(0.75,0.75)</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Morphine</defName>
+    <label>morphine injector</label>
+    <description>A single-use tactical injector. Effects last 6 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Morphine</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Morphine</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>1</Neutroamine>
+      <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Adrenaline</defName>
+    <label>adrenaline injector</label>
+    <description>A single-use tactical injector. Effects last 1 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Adrenaline</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Adrenaline</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Yayo>1</Yayo>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Propital</defName>
+    <label>propital injector</label>
+    <description>A single-use tactical injector. Effects last 5 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Propital</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Propital</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Medicine>1</Medicine>
+      <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Zagustin</defName>
+    <label>zagustin injector</label>
+    <description>A single-use tactical injector. Effects last 3 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Zagustin</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Zagustin</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Medicine>1</Medicine>
+      <MedicineHerbal>2</MedicineHerbal>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_AHF1M</defName>
+    <label>ahf1-m injector</label>
+    <description>A single-use tactical injector. Effects last 2 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/AHF1M</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_AHF1M</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Medicine>1</Medicine>
+      <Cloth>1</Cloth>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_xTG12</defName>
+    <label>xtg-12 injector</label>
+    <description>A single-use tactical injector. Effects last 3 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/xTG12</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_xTG12</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Penoxycyline>1</Penoxycyline>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_SJ1</defName>
+    <label>sj1 injector</label>
+    <description>A single-use tactical injector. Effects last 4 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/SJ1</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_SJ1</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Yayo>1</Yayo>
+      <WakeUp>1</WakeUp>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_SJ6</defName>
+    <label>sj6 injector</label>
+    <description>A single-use tactical injector. Effects last 5 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/SJ6</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_SJ6</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <GoJuice>1</GoJuice>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_L1</defName>
+    <label>l1 norepinephrine injector</label>
+    <description>A single-use tactical injector. Effects last 3 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/L1</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_L1</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <GoJuice>1</GoJuice>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Trimadol</defName>
+    <label>trimadol injector</label>
+    <description>A single-use tactical injector. Effects last 4 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Trimadol</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Trimadol</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <GoJuice>1</GoJuice>
+      <WakeUp>1</WakeUp>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Meldonin</defName>
+    <label>meldonin injector</label>
+    <description>A single-use tactical injector. Effects last 12 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Meldonin</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Meldonin</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <WakeUp>1</WakeUp>
+      <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_3bTG</defName>
+    <label>3-(b-tg) injector</label>
+    <description>A single-use tactical injector. Effects last 4 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/3bTG</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_3bTG</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <WakeUp>1</WakeUp>
+      <Yayo>1</Yayo>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_2A2bTG</defName>
+    <label>2a2-(b-tg) injector</label>
+    <description>A single-use tactical injector. Effects last 12 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/2A2bTG</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_2A2bTG</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <WakeUp>1</WakeUp>
+      <Medicine>1</Medicine>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_PNB</defName>
+    <label>pnb product 16 injector</label>
+    <description>A single-use tactical injector. Effects last 2 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>140</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/PNB</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_PNB</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <GoJuice>1</GoJuice>
+      <Medicine>1</Medicine>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_eTG</defName>
+    <label>etg-change injector</label>
+    <description>A single-use tactical injector. Effects last 2 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>260</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/eTG</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_eTG</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>4</Neutroamine>
+      <MedicineUltratech>1</MedicineUltratech>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_P22</defName>
+    <label>p22 product 22 injector</label>
+    <description>A single-use tactical injector. Effects last 3 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>260</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/P22</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_P22</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <Medicine>1</Medicine>
+      <WakeUp>1</WakeUp>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Perfotoran</defName>
+    <label>perfotoran blue blood injector</label>
+    <description>A single-use tactical injector. Effects last 3 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>260</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Perfotoran</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Perfotoran</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <Medicine>1</Medicine>
+      <Penoxycyline>1</Penoxycyline>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_SJ9</defName>
+    <label>sj9 injector</label>
+    <description>A single-use tactical injector. Effects last 5 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>260</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/SJ9</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_SJ9</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <Yayo>1</Yayo>
+      <Penoxycyline>1</Penoxycyline>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_SJ12</defName>
+    <label>sj12 injector</label>
+    <description>A single-use tactical injector. Effects last 8 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>260</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/SJ12</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_SJ12</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+      <WakeUp>1</WakeUp>
+      <Penoxycyline>1</Penoxycyline>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_MULE</defName>
+    <label>m.u.l.e. injector</label>
+    <description>A single-use tactical injector. Effects last 12 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>260</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/MULE</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_MULE</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>4</Neutroamine>
+      <GoJuice>1</GoJuice>
+      <Medicine>1</Medicine>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Obdolbos</defName>
+    <label>obdolbos injector</label>
+    <description>A single-use tactical injector. Effects last 6 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Obdolbos</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Obdolbos</effect>
+        <originalObdolbos>true</originalObdolbos>
+        <randomObdolbos>true</randomObdolbos>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Experimental</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>5</Neutroamine>
+      <GoJuice>1</GoJuice>
+      <WakeUp>1</WakeUp>
+      <Chemfuel>1</Chemfuel>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="TCI_InjectorBase">
+    <defName>TCI_Obdolbos2</defName>
+    <label>obdolbos 2 injector</label>
+    <description>A single-use tactical injector. Effects last 16 in-game hours. Player ordered injection only; no recreational use.</description>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>TarkovInjectors/Obdolbos2</texPath>
+    </graphicData>
+    <comps>
+      <li Class="TarkovInjectors.CompProperties_Injector">
+        <effect>TCI_Effect_Obdolbos2</effect>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>TCI_Experimental</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>6</Neutroamine>
+      <GoJuice>1</GoJuice>
+      <WakeUp>1</WakeUp>
+      <MedicineUltratech>1</MedicineUltratech>
+    </costList>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Morphine</defName>
+    <label>injected morphine</label>
+    <description>Temporary pharmaceutical effects from Morphine.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>15000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.2</painFactor>
+        <hungerRateFactor>1.2</hungerRateFactor>
+        <restFallFactor>1.15</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Adrenaline</defName>
+    <label>injected adrenaline</label>
+    <description>Temporary pharmaceutical effects from Adrenaline.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>2500</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>4</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.4</painFactor>
+        <hungerRateFactor>1.25</hungerRateFactor>
+        <restFallFactor>1.2</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Propital</defName>
+    <label>injected propital</label>
+    <description>Temporary pharmaceutical effects from Propital.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>12500</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>2</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.6</painFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Zagustin</defName>
+    <label>injected zagustin</label>
+    <description>Temporary pharmaceutical effects from Zagustin.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>7500</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>true</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.8</painFactor>
+        <hungerRateFactor>1.3</hungerRateFactor>
+        <restFallFactor>1.05</restFallFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_AHF1M</defName>
+    <label>injected ahf1-m</label>
+    <description>Temporary pharmaceutical effects from AHF1-M.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>5000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>true</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.25</hungerRateFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_xTG12</defName>
+    <label>injected xtg-12</label>
+    <description>Temporary pharmaceutical effects from xTG-12.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>7500</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0.5</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_SJ1</defName>
+    <label>injected sj1</label>
+    <description>Temporary pharmaceutical effects from SJ1.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>10000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.8</painFactor>
+        <hungerRateFactor>1.25</hungerRateFactor>
+        <restFallFactor>1.3</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_SJ6</defName>
+    <label>injected sj6</label>
+    <description>Temporary pharmaceutical effects from SJ6.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>12500</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.1</hungerRateFactor>
+        <restFallFactor>1.15</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_L1</defName>
+    <label>injected l1 norepinephrine</label>
+    <description>Temporary pharmaceutical effects from L1 Norepinephrine.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>7500</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.6</painFactor>
+        <hungerRateFactor>1.25</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Trimadol</defName>
+    <label>injected trimadol</label>
+    <description>Temporary pharmaceutical effects from Trimadol.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>10000</durationTicks>
+    <crashDurationTicks>10000</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.5</painFactor>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.5</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Meldonin</defName>
+    <label>injected meldonin</label>
+    <description>Temporary pharmaceutical effects from Meldonin.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>30000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.3</hungerRateFactor>
+        <restFallFactor>0.75</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_3bTG</defName>
+    <label>injected 3-(b-tg)</label>
+    <description>Temporary pharmaceutical effects from 3-(b-TG).</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>10000</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.2</hungerRateFactor>
+        <restFallFactor>1.1</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_2A2bTG</defName>
+    <label>injected 2a2-(b-tg)</label>
+    <description>Temporary pharmaceutical effects from 2A2-(b-TG).</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>30000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.2</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CarryingCapacity>1.2</CarryingCapacity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_PNB</defName>
+    <label>injected pnb product 16</label>
+    <description>Temporary pharmaceutical effects from PNB Product 16.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>5000</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>4</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.1</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_eTG</defName>
+    <label>injected etg-change</label>
+    <description>Temporary pharmaceutical effects from eTG-change.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>5000</durationTicks>
+    <crashDurationTicks>7500</crashDurationTicks>
+    <healHPPerHour>12</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.15</hungerRateFactor>
+        <restFallFactor>1.05</restFallFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_P22</defName>
+    <label>injected p22 product 22</label>
+    <description>Temporary pharmaceutical effects from P22 Product 22.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>7500</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <painFactor>0.8</painFactor>
+        <restFallFactor>1.2</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Perfotoran</defName>
+    <label>injected perfotoran blue blood</label>
+    <description>Temporary pharmaceutical effects from Perfotoran Blue Blood.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>7500</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>2</healHPPerHour>
+    <clotBleeding>true</clotBleeding>
+    <toxicBuildupReduction>0.2</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li/>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_SJ9</defName>
+    <label>injected sj9</label>
+    <description>Temporary pharmaceutical effects from SJ9.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>12500</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.1</hungerRateFactor>
+        <restFallFactor>1.05</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_SJ12</defName>
+    <label>injected sj12</label>
+    <description>Temporary pharmaceutical effects from SJ12.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>20000</durationTicks>
+    <crashDurationTicks>5000</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.25</hungerRateFactor>
+        <restFallFactor>0.9</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_MULE</defName>
+    <label>injected m.u.l.e.</label>
+    <description>Temporary pharmaceutical effects from M.U.L.E..</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>30000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0.1</strainPerHour>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CarryingCapacity>1.5</CarryingCapacity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Obdolbos</defName>
+    <label>injected obdolbos</label>
+    <description>Temporary pharmaceutical effects from Obdolbos.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>3</maxSeverity>
+    <durationTicks>15000</durationTicks>
+    <crashDurationTicks>0</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0</strainPerHour>
+    <stages>
+      <li>
+        <minSeverity>0.0</minSeverity>
+        <painFactor>0.6</painFactor>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.1</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.1</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>2.0</minSeverity>
+        <painFactor>0.35</painFactor>
+        <hungerRateFactor>2</hungerRateFactor>
+        <restFallFactor>1.5</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Class="TarkovInjectors.InjectorEffectDef">
+    <defName>TCI_Effect_Obdolbos2</defName>
+    <label>injected obdolbos 2</label>
+    <description>Temporary pharmaceutical effects from Obdolbos 2.</description>
+    <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <durationTicks>40000</durationTicks>
+    <crashDurationTicks>7500</crashDurationTicks>
+    <healHPPerHour>0</healHPPerHour>
+    <clotBleeding>false</clotBleeding>
+    <toxicBuildupReduction>0</toxicBuildupReduction>
+    <strainPerHour>0.15</strainPerHour>
+    <stages>
+      <li>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.4</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CarryingCapacity>1.45</CarryingCapacity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

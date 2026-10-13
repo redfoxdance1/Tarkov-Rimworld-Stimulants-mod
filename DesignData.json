@@ -1,0 +1,511 @@
+[
+  {
+    "key": "Morphine",
+    "label": "Morphine",
+    "tier": 1,
+    "recipe": {
+      "Neutroamine": 1,
+      "MedicineHerbal": 1
+    },
+    "durationHours": 6,
+    "capacityOffsets": {
+      "Consciousness": -0.15
+    },
+    "painFactor": 0.2,
+    "hungerFactor": 1.2,
+    "restFactor": 1.15,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "Adrenaline",
+    "label": "Adrenaline",
+    "tier": 1,
+    "recipe": {
+      "Neutroamine": 2,
+      "Yayo": 1
+    },
+    "durationHours": 1,
+    "capacityOffsets": {
+      "Moving": 0.25,
+      "BloodPumping": 0.2
+    },
+    "painFactor": 0.4,
+    "hungerFactor": 1.25,
+    "restFactor": 1.2,
+    "healHPPerHour": 4,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "Propital",
+    "label": "Propital",
+    "tier": 1,
+    "recipe": {
+      "Neutroamine": 2,
+      "Medicine": 1,
+      "MedicineHerbal": 1
+    },
+    "durationHours": 5,
+    "capacityOffsets": {},
+    "painFactor": 0.6,
+    "hungerFactor": 1,
+    "restFactor": 1,
+    "healHPPerHour": 2,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "Zagustin",
+    "label": "Zagustin",
+    "tier": 1,
+    "recipe": {
+      "Neutroamine": 2,
+      "Medicine": 1,
+      "MedicineHerbal": 2
+    },
+    "durationHours": 3,
+    "capacityOffsets": {},
+    "painFactor": 0.8,
+    "hungerFactor": 1.3,
+    "restFactor": 1.05,
+    "healHPPerHour": 0,
+    "clot": 1,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "AHF1M",
+    "label": "AHF1-M",
+    "tier": 1,
+    "recipe": {
+      "Neutroamine": 2,
+      "Medicine": 1,
+      "Cloth": 1
+    },
+    "durationHours": 2,
+    "capacityOffsets": {},
+    "painFactor": 1,
+    "hungerFactor": 1.25,
+    "restFactor": 1,
+    "healHPPerHour": 0,
+    "clot": 1,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "xTG12",
+    "label": "xTG-12",
+    "tier": 1,
+    "recipe": {
+      "Neutroamine": 2,
+      "Penoxycyline": 1
+    },
+    "durationHours": 3,
+    "capacityOffsets": {
+      "Consciousness": -0.1
+    },
+    "painFactor": 1,
+    "hungerFactor": 1,
+    "restFactor": 1,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0.5,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "SJ1",
+    "label": "SJ1",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 2,
+      "Yayo": 1,
+      "WakeUp": 1
+    },
+    "durationHours": 4,
+    "capacityOffsets": {
+      "Moving": 0.15,
+      "Manipulation": 0.1
+    },
+    "painFactor": 0.8,
+    "hungerFactor": 1.25,
+    "restFactor": 1.3,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "SJ6",
+    "label": "SJ6",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 3,
+      "GoJuice": 1
+    },
+    "durationHours": 5,
+    "capacityOffsets": {
+      "Moving": 0.25,
+      "Sight": 0.1
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.1,
+    "restFactor": 1.15,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "L1",
+    "label": "L1 Norepinephrine",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 2,
+      "GoJuice": 1
+    },
+    "durationHours": 3,
+    "capacityOffsets": {
+      "Moving": 0.15,
+      "Manipulation": 0.1
+    },
+    "painFactor": 0.6,
+    "hungerFactor": 1.25,
+    "restFactor": 1,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "Trimadol",
+    "label": "Trimadol",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 3,
+      "GoJuice": 1,
+      "WakeUp": 1
+    },
+    "durationHours": 4,
+    "capacityOffsets": {
+      "Moving": 0.2,
+      "Sight": 0.1
+    },
+    "painFactor": 0.5,
+    "hungerFactor": 1.5,
+    "restFactor": 1.5,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 4,
+    "statFactors": {}
+  },
+  {
+    "key": "Meldonin",
+    "label": "Meldonin",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 3,
+      "WakeUp": 1,
+      "MedicineHerbal": 1
+    },
+    "durationHours": 12,
+    "capacityOffsets": {
+      "Moving": 0.1,
+      "Manipulation": 0.05
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.3,
+    "restFactor": 0.75,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "3bTG",
+    "label": "3-(b-TG)",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 3,
+      "WakeUp": 1,
+      "Yayo": 1
+    },
+    "durationHours": 4,
+    "capacityOffsets": {
+      "Sight": 0.15,
+      "Manipulation": 0.1
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.2,
+    "restFactor": 1.1,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "2A2bTG",
+    "label": "2A2-(b-TG)",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 3,
+      "WakeUp": 1,
+      "Medicine": 1
+    },
+    "durationHours": 12,
+    "capacityOffsets": {
+      "Sight": 0.1
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.2,
+    "restFactor": 1,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {
+      "CarryingCapacity": 1.2
+    }
+  },
+  {
+    "key": "PNB",
+    "label": "PNB Product 16",
+    "tier": 2,
+    "recipe": {
+      "Neutroamine": 3,
+      "GoJuice": 1,
+      "Medicine": 1
+    },
+    "durationHours": 2,
+    "capacityOffsets": {
+      "Manipulation": 0.15
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.1,
+    "restFactor": 1,
+    "healHPPerHour": 4,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "eTG",
+    "label": "eTG-change",
+    "tier": 3,
+    "recipe": {
+      "Neutroamine": 4,
+      "MedicineUltratech": 1
+    },
+    "durationHours": 2,
+    "capacityOffsets": {},
+    "painFactor": 1,
+    "hungerFactor": 1.15,
+    "restFactor": 1.05,
+    "healHPPerHour": 12,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 3,
+    "statFactors": {}
+  },
+  {
+    "key": "P22",
+    "label": "P22 Product 22",
+    "tier": 3,
+    "recipe": {
+      "Neutroamine": 3,
+      "Medicine": 1,
+      "WakeUp": 1
+    },
+    "durationHours": 3,
+    "capacityOffsets": {
+      "BloodPumping": 0.2
+    },
+    "painFactor": 0.8,
+    "hungerFactor": 1,
+    "restFactor": 1.2,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {
+      "ImmunityGainSpeed": 1.2
+    }
+  },
+  {
+    "key": "Perfotoran",
+    "label": "Perfotoran Blue Blood",
+    "tier": 3,
+    "recipe": {
+      "Neutroamine": 3,
+      "Medicine": 1,
+      "Penoxycyline": 1
+    },
+    "durationHours": 3,
+    "capacityOffsets": {},
+    "painFactor": 1,
+    "hungerFactor": 1,
+    "restFactor": 1,
+    "healHPPerHour": 2,
+    "clot": 1,
+    "toxinsRemoved": 0.2,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "SJ9",
+    "label": "SJ9",
+    "tier": 3,
+    "recipe": {
+      "Neutroamine": 3,
+      "Yayo": 1,
+      "Penoxycyline": 1
+    },
+    "durationHours": 5,
+    "capacityOffsets": {
+      "Sight": 0.1,
+      "Manipulation": -0.15
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.1,
+    "restFactor": 1.05,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "SJ12",
+    "label": "SJ12",
+    "tier": 3,
+    "recipe": {
+      "Neutroamine": 3,
+      "WakeUp": 1,
+      "Penoxycyline": 1
+    },
+    "durationHours": 8,
+    "capacityOffsets": {
+      "Sight": 0.1
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.25,
+    "restFactor": 0.9,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 2,
+    "statFactors": {}
+  },
+  {
+    "key": "MULE",
+    "label": "M.U.L.E.",
+    "tier": 3,
+    "recipe": {
+      "Neutroamine": 4,
+      "GoJuice": 1,
+      "Medicine": 1
+    },
+    "durationHours": 12,
+    "capacityOffsets": {
+      "Moving": 0.05
+    },
+    "painFactor": 1,
+    "hungerFactor": 1,
+    "restFactor": 1,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0.1,
+    "crashHours": 0,
+    "statFactors": {
+      "CarryingCapacity": 1.5
+    }
+  },
+  {
+    "key": "Obdolbos",
+    "label": "Obdolbos",
+    "tier": 4,
+    "recipe": {
+      "Neutroamine": 5,
+      "GoJuice": 1,
+      "WakeUp": 1,
+      "Chemfuel": 1
+    },
+    "durationHours": 6,
+    "capacityOffsets": {},
+    "painFactor": 1,
+    "hungerFactor": 1.5,
+    "restFactor": 1.5,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0,
+    "crashHours": 0,
+    "statFactors": {}
+  },
+  {
+    "key": "Obdolbos2",
+    "label": "Obdolbos 2",
+    "tier": 4,
+    "recipe": {
+      "Neutroamine": 6,
+      "GoJuice": 1,
+      "WakeUp": 1,
+      "MedicineUltratech": 1
+    },
+    "durationHours": 16,
+    "capacityOffsets": {
+      "Moving": 0.15,
+      "Sight": 0.1,
+      "Manipulation": 0.1,
+      "Consciousness": -0.2
+    },
+    "painFactor": 1,
+    "hungerFactor": 1.5,
+    "restFactor": 1.4,
+    "healHPPerHour": 0,
+    "clot": 0,
+    "toxinsRemoved": 0,
+    "strainPerHour": 0.15,
+    "crashHours": 3,
+    "statFactors": {
+      "CarryingCapacity": 1.45
+    }
+  }
+]

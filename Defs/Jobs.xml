@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>TCI_InjectSelf</defName>
+    <driverClass>TarkovInjectors.JobDriver_InjectSelf</driverClass>
+    <reportString>Administering a stimulant.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>TCI_InjectPatient</defName>
+    <driverClass>TarkovInjectors.JobDriver_InjectPatient</driverClass>
+    <reportString>Administering an injector.</reportString>
+  </JobDef>
+</Defs>
