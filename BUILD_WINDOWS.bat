@@ -1,5 +1,10 @@
 @echo off
-REM Edit this path to point at your installed RimWorld Managed directory.
-set "RIMWORLD_MANAGED=C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed"
-dotnet build Source\TarkovCombatInjectors.csproj -c Release -p:RimWorldManaged="%RIMWORLD_MANAGED%"
+REM Requires the .NET SDK and an internet connection for RimRef restore.
+REM Reference assemblies are downloaded via NuGet (no RimWorld installation path needed).
+dotnet build Source\TarkovCombatInjectors.csproj -c Release
+if errorlevel 1 (
+  echo Build failed. See compiler messages above.
+  exit /b 1
+)
+echo Built Assemblies\TarkovCombatInjectors.dll
 pause

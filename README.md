@@ -1,6 +1,6 @@
 # Tarkov Combat Injectors — RimWorld
 
-**Uncompiled development prototype (v0.1)** targeting **RimWorld 1.6**.
+**v0.2 testing candidate** targeting **RimWorld 1.6**. The `v0.2-testing` branch includes a CI compiler build; do not use an important colony save until compilation succeeds and playtesting is complete.
 
 An unofficial RimWorld mod prototype adapting 22 Escape from Tarkov-style tactical injectors into colony medicine, combat, and survival. This repository contains the **source files and original placeholder syringe artwork**, but **does not yet contain a compiled DLL**. Do not install it into an important save until it compiles and passes in-game testing.
 
@@ -66,6 +66,14 @@ You can run `python Source_Validation.py` to validate the basic source structure
 
 ## Project status
 
-**v0.1 source prototype**, not an install-ready release. The next milestone is a successful compile against RimWorld 1.6, fixing any red errors, and practical overdose/injection testing.
+**v0.2 testing candidate**, not yet a verified playable release. GitHub Actions tests compilation before producing an artifact. The next milestone is a successful compile against RimWorld 1.6, fixing any red errors, and practical overdose/injection testing.
 
 This is an unofficial fan-made adaptation and is not affiliated with Battlestate Games or Ludeon Studios.
+
+## v0.2-testing branch and CI
+
+- Pull requests and pushes to this branch run XML validation and an actual .NET Framework 4.7.2 assembly build on Windows.
+- Compilation references the public **Krafs.Rimworld.Ref 1.6.4850** NuGet package (RimRef), published with permission from Ludeon Studios; no copyrighted game binaries are stored in this repository.
+- On a successful run, open the **Actions** tab, select the workflow run, and download the **TarkovCombatInjectors-v0.2-testing** artifact. Extract the ZIP into your local RimWorld `Mods` folder for first-run testing.
+- v0.2 changes: 1.6 interval-aware ticking, corrected 4-hour untreated overdose window, resilience for missing Human `comps` XML, crafting skill thresholds, and a pre-destruction injector label snapshot.
+- The next verification step is to fix any compiler diagnostics returned by CI; compile success does not prove runtime compatibility.

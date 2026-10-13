@@ -48,6 +48,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -78,6 +81,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -108,6 +114,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -139,6 +148,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -170,6 +182,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -201,6 +216,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -231,6 +249,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -262,6 +283,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -292,6 +316,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -322,6 +349,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -353,6 +383,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -384,6 +417,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -415,6 +451,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -446,6 +485,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -477,6 +519,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -507,6 +552,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -538,6 +586,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -569,6 +620,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -600,6 +654,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -631,6 +688,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -664,6 +724,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Experimental</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>10</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -696,6 +759,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Experimental</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>10</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>

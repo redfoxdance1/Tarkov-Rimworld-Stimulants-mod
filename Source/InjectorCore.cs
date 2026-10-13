@@ -72,15 +72,16 @@ namespace TarkovInjectors
             Scribe_Values.Look(ref nextDecayTick, "tci_nextDecayTick", 0);
         }
 
-        public override void CompTick()
+        public override void CompTickInterval(int delta)
         {
-            base.CompTick();
+            base.CompTickInterval(delta);
             if (stimLoad <= 0 || Find.TickManager == null) return;
             int tick = Find.TickManager.TicksGame;
-            if (nextDecayTick > 0 && tick >= nextDecayTick)
+            // A skipped/large tick interval must not postpone recovery.
+            while (stimLoad > 0 && nextDecayTick > 0 && tick >= nextDecayTick)
             {
-                stimLoad = Math.Max(0, stimLoad - 1);
-                nextDecayTick = stimLoad > 0 ? tick + DecayInterval : 0;
+                stimLoad--;
+                nextDecayTick = stimLoad > 0 ? nextDecayTick + DecayInterval : 0;
             }
         }
 
@@ -196,7 +197,8 @@ namespace TarkovInjectors
             HediffDef effect = injection.InjectorProps.effect;
             if (effect == null) return;
 
-            // Consume exactly one syringe before rolling; double dosing counts even with same kind.
+            // Consume exactly one syringe before rolling; keep the label before destroying it.
+            string injectorName = item.LabelCap;
             item.SplitOff(1).Destroy(DestroyMode.Vanish);
             stimLoad++;
             nextDecayTick = Find.TickManager.TicksGame + DecayInterval;
@@ -223,7 +225,7 @@ namespace TarkovInjectors
                 applied.Severity = Rand.Range(0, 3) + 0.1f; // randomized stage
                 // No second unadvertised death roll: the shared stimulant risk controls overdoses.
             }
-            Messages.Message(pawn.LabelShortCap + " injected " + item.LabelCap + ". Stim load: " + stimLoad + ".", MessageTypeDefOf.NeutralEvent);
+            Messages.Message(pawn.LabelShortCap + " injected " + injectorName + ". Stim load: " + stimLoad + ".", MessageTypeDefOf.NeutralEvent);
         }
 
         private bool IsObdolbosActive()

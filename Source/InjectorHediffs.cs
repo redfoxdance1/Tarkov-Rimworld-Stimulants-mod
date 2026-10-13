@@ -29,15 +29,19 @@ namespace TarkovInjectors
             }
         }
 
-        public override void Tick()
+        public override void TickInterval(int delta)
         {
-            base.Tick();
-            if (Settings == null || pawn == null || pawn.Dead) return;
+            base.TickInterval(delta);
+            if (Settings == null || pawn == null || pawn.Dead || delta <= 0) return;
             if (remainingTicks < 0) remainingTicks = Settings.durationTicks;
-            remainingTicks--;
-            if (++pulseTicks >= 250)
+
+            // Process only time during which the stimulant is actually active.
+            int activeTicks = Math.Min(delta, Math.Max(0, remainingTicks));
+            pulseTicks += activeTicks;
+            remainingTicks -= delta;
+            while (pulseTicks >= 250 && !pawn.Dead)
             {
-                pulseTicks = 0;
+                pulseTicks -= 250;
                 if (Settings.healHPPerHour > 0f) HealInjuries(Settings.healHPPerHour / 10f);
                 if (Settings.clotBleeding) ClotWounds();
                 if (Settings.strainPerHour > 0f) ApplyStrain(Settings.strainPerHour / 10f);
@@ -50,7 +54,8 @@ namespace TarkovInjectors
                     Hediff active = pawn.health.hediffSet.GetFirstHediffOfDef(crash);
                     if (active != null) pawn.health.RemoveHediff(active);
                     Hediff fresh = pawn.health.AddHediff(crash);
-                    if (fresh is Hediff_InjectorEffect crashEffect) crashEffect.OverrideDuration(Settings.crashDurationTicks);
+                    if (fresh is Hediff_InjectorEffect crashEffect)
+                        crashEffect.OverrideDuration(Settings.crashDurationTicks);
                 }
                 pawn.health.RemoveHediff(this);
             }
@@ -104,24 +109,27 @@ namespace TarkovInjectors
             base.ExposeData();
             Scribe_Values.Look(ref pulseTicks, "tci_overdosePulse", 0);
         }
-        public override void Tick()
+        public override void TickInterval(int delta)
         {
-            base.Tick();
-            if (pawn == null || pawn.Dead || ++pulseTicks < 250) return;
-            pulseTicks = 0;
-            HediffComp_TendDuration tend = TryGetComp<HediffComp_TendDuration>();
-            bool stabilized = tend != null && tend.IsTended;
-            // Untreated: lethal within ~4 game hours. Tended: ~12h recovery.
-            Severity += stabilized ? -0.005f : 0.025f;
-            if (Severity <= 0f)
+            base.TickInterval(delta);
+            if (pawn == null || pawn.Dead || delta <= 0) return;
+            pulseTicks += delta;
+            while (pulseTicks >= 250 && !pawn.Dead)
             {
-                HediffDef crash = DefDatabase<HediffDef>.GetNamed("TCI_StimulantExhaustion");
-                Hediff old = pawn.health.hediffSet.GetFirstHediffOfDef(crash);
-                if (old == null)
+                pulseTicks -= 250;
+                HediffComp_TendDuration tend = TryGetComp<HediffComp_TendDuration>();
+                bool stabilized = tend != null && tend.IsTended;
+                // At 0.6 initial severity, untreated overdose reaches 1.0 in ~4 game hours.
+                // A successfully tended overdose recovers in ~12 game hours.
+                Severity += stabilized ? -0.005f : 0.01f;
+                if (Severity <= 0f)
                 {
-                    Hediff fresh = pawn.health.AddHediff(crash);
+                    HediffDef crash = DefDatabase<HediffDef>.GetNamed("TCI_StimulantExhaustion");
+                    if (pawn.health.hediffSet.GetFirstHediffOfDef(crash) == null)
+                        pawn.health.AddHediff(crash);
+                    pawn.health.RemoveHediff(this);
+                    break;
                 }
-                pawn.health.RemoveHediff(this);
             }
         }
     }
