@@ -1,0 +1,9 @@
+# Generated build artifacts
+Assemblies/
+Source/bin/
+Source/obj/
+*.dll
+*.pdb
+__pycache__/
+*.pyc
+.DS_Store
