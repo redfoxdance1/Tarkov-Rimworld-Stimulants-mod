@@ -29,7 +29,7 @@ for item in items:
 core = (r / "Source/InjectorCore.cs").read_text(encoding="utf-8")
 effects_code = (r / "Source/InjectorHediffs.cs").read_text(encoding="utf-8")
 pickup = (r / "Source/FloatMenuOptionProvider_InjectorPickup.cs").read_text(encoding="utf-8")
-match = re.search(r"float\\[\\] Risks\\s*=\\s*\\{([^}]*)\\}", core)
+match = re.search(r"float\[\] Risks\s*=\s*\{([^}]*)\}", core)
 assert match, "Could not locate C# overdose table"
 values = [float(v.strip().rstrip("f")) for v in match.group(1).split(",")]
 assert values == [0, .2, .4, .8, .995], values
