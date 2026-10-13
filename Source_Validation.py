@@ -25,3 +25,14 @@ assert isclose(1-(1-.2)*(1-.4)*(1-.8)*(1-.995),.99952)
 assert any(e.findtext('defName')=='TCI_InjectSelf' for e in ET.parse(r/'Defs/Jobs.xml').getroot())
 assert any(e.findtext('defName')=='TCI_InjectPatient' for e in ET.parse(r/'Defs/Jobs.xml').getroot())
 print(f'PASS: {len(files)} valid XML docs, {len(items)} recipes + textures, {len(effects)} effects, two manual job defs, overdose probabilities.')
+
+# Pickup is a player-only context menu that uses vanilla inventory handling.
+pickup=(r/'Source/FloatMenuOptionProvider_InjectorPickup.cs').read_text()
+assert 'FloatMenuOptionProvider_InjectorPickup : FloatMenuOptionProvider' in pickup
+assert 'clickedThing.TryGetComp<CompInjector>()' in pickup
+assert 'pawn.IsColonistPlayerControlled' in pickup
+assert 'JobDefOf.TakeInventory' in pickup
+assert 'job.checkEncumbrance = true' in pickup
+assert 'Dialog_Slider' in pickup
+assert 'requestedCount > maxCount' in pickup
+print('PASS: manual injector pickup provider, vanilla inventory job and mass/quantity protections present.')

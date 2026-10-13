@@ -7,7 +7,7 @@ An unofficial RimWorld mod prototype adapting 22 Escape from Tarkov-style tactic
 ## Features included in the source
 
 - **22 injectors**, each with an individual recipe, research tier, duration, and temporary health effect
-- **Manual activation only.** No recreational use, autonomous drug-taking, or drug-policy ingestion. Select a pawn and open the **Inject** menu to choose among injectors in the pawn's inventory
+- **Manual carrying and activation only.** Select a pawn, right-click an injector lying on the map, and use **Pick up to inventory** (or **Pick up some** for stacked syringes). Select the pawn and open **Inject** to use a carried syringe. Pawns never take injectors for recreation, drug policies, injury, or combat without an explicit player order.
 - **Doctor administration prototype** for downed patients by player order
 - **Shared escalating overdose odds** per injection: 1st **0%**, 2nd **20%**, 3rd **40%**, 4th **80%**, and 5th or later **99.5%**
 - **Acute overdose:** Pawn collapses with a tendable, worsening medical condition; doctor treatment can stabilize and eventually recover the pawn
@@ -30,10 +30,11 @@ Defs/Injectors.xml                     Items and crafting recipes
 Defs/Effects.xml                       Duration, capacity, and drug effect definitions
 Defs/MedicalConditions.xml             Overdose, exhaustion, chemical strain
 Defs/Research.xml                      Four research tiers
-Defs/Jobs.xml                          Self-injection and doctor injection jobs
+Defs/Jobs.xml                          Self-injection and doctor injection jobs (pickup uses vanilla TakeInventory)
 Patches/ColonistController.xml         Inject command for human pawns
 Source/InjectorCore.cs                 Manual injection, overdose, and jobs
 Source/InjectorHediffs.cs              Medical and drug effect behavior
+Source/FloatMenuOptionProvider_InjectorPickup.cs  Manual syringe pickup context menu
 Source/TarkovCombatInjectors.csproj    C# project (no DLL included)
 Textures/TarkovInjectors/              Placeholder PNG textures
 DesignData.json                        Injector specification data
@@ -56,7 +57,7 @@ You can run `python Source_Validation.py` to validate the basic source structure
 
 ## Known prototype limitations
 
-- **Not compiled or playtested.** C# calls and some XML defs may need correction against the RimWorld 1.6 game assemblies.
+- **Not compiled or playtested.** C# calls and some XML defs may need correction against the RimWorld 1.6 game assemblies. The new manual pickup UI uses RimWorld 1.6's native `FloatMenuOptionProvider`, `JobDefOf.TakeInventory`, and inventory mass checks, but remains unverified in-game.
 - SJ9 thermal stealth does not yet alter enemy targeting AI.
 - M.U.L.E. and 2A2 use carrying-capacity stat modifiers; not every inventory/caravan mass calculation is covered.
 - Bleeding prevention currently uses vanilla wound tending rather than a separate clotting hediff.
