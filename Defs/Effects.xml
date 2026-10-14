@@ -3,7 +3,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Morphine</defName>
     <label>injected morphine</label>
-    <description>Temporary pharmaceutical effects from Morphine.</description>
+    <description>Strong pain relief: pain is multiplied by 0.20 (80% reduction). Consciousness capacity -0.15; hunger rate +20%; rest need drains 15% faster.</description>
+    <statusLabel>pain suppression</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -29,7 +30,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Adrenaline</defName>
     <label>injected adrenaline</label>
-    <description>Temporary pharmaceutical effects from Adrenaline.</description>
+    <description>Pain -60%; Moving capacity +0.25; Blood Pumping +0.20. Heals nonpermanent injuries at 4 HP per game hour. Hunger +25%; rest drain +20%. A stimulant crash follows.</description>
+    <statusLabel>combat surge and healing</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -59,7 +61,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Propital</defName>
     <label>injected propital</label>
-    <description>Temporary pharmaceutical effects from Propital.</description>
+    <description>Pain -40%. Heals nonpermanent injuries at 2 HP per game hour. A stimulant crash follows.</description>
+    <statusLabel>pain relief and healing</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -77,7 +80,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Zagustin</defName>
     <label>injected zagustin</label>
-    <description>Temporary pharmaceutical effects from Zagustin.</description>
+    <description>Stops bleeding while active without tending injuries. Pain -20%; hunger +30%; rest drain +5%. A stimulant crash follows.</description>
+    <statusLabel>bleeding suppression</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -98,7 +102,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_AHF1M</defName>
     <label>injected ahf1-m</label>
-    <description>Temporary pharmaceutical effects from AHF1-M.</description>
+    <description>Stops bleeding while active without tending injuries. Hunger rate +25%.</description>
+    <statusLabel>bleeding suppression</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -117,7 +122,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_xTG12</defName>
     <label>injected xtg-12</label>
-    <description>Temporary pharmaceutical effects from xTG-12.</description>
+    <description>Immediately reduces existing toxic buildup severity by 0.50 on injection. Consciousness capacity -0.10 during the effect.</description>
+    <statusLabel>detoxification</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -140,7 +146,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_SJ1</defName>
     <label>injected sj1</label>
-    <description>Temporary pharmaceutical effects from SJ1.</description>
+    <description>Moving capacity +0.15; Manipulation +0.10; pain -20%. Hunger rate +25%; rest drain +30%.</description>
+    <statusLabel>movement and dexterity</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -170,7 +177,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_SJ6</defName>
     <label>injected sj6</label>
-    <description>Temporary pharmaceutical effects from SJ6.</description>
+    <description>Moving capacity +0.25; Sight +0.10. Hunger +10%; rest drain +15%. A stimulant crash follows.</description>
+    <statusLabel>mobility and vision</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -199,7 +207,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_L1</defName>
     <label>injected l1 norepinephrine</label>
-    <description>Temporary pharmaceutical effects from L1 Norepinephrine.</description>
+    <description>Moving capacity +0.15; Manipulation +0.10; pain -40%; hunger +25%.</description>
+    <statusLabel>combat alertness</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -228,7 +237,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Trimadol</defName>
     <label>injected trimadol</label>
-    <description>Temporary pharmaceutical effects from Trimadol.</description>
+    <description>Moving capacity +0.20; Sight +0.10; pain -50%. Hunger +50%; rest drain +50%. A prolonged stimulant crash follows.</description>
+    <statusLabel>mobility and pain relief</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -258,7 +268,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Meldonin</defName>
     <label>injected meldonin</label>
-    <description>Temporary pharmaceutical effects from Meldonin.</description>
+    <description>Moving capacity +0.10; Manipulation +0.05; rest drain -25%; hunger +30%.</description>
+    <statusLabel>endurance</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -287,7 +298,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_3bTG</defName>
     <label>injected 3-(b-tg)</label>
-    <description>Temporary pharmaceutical effects from 3-(b-TG).</description>
+    <description>Sight capacity +0.15; Manipulation +0.10. Hunger +20%; rest drain +10%. A stimulant crash follows.</description>
+    <statusLabel>sharper senses</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -316,7 +328,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_2A2bTG</defName>
     <label>injected 2a2-(b-tg)</label>
-    <description>Temporary pharmaceutical effects from 2A2-(b-TG).</description>
+    <description>Carrying Capacity x1.20; Sight capacity +0.10; hunger +20%. Combat Extended carry stats also receive this multiplier when CE is active.</description>
+    <statusLabel>carrying capacity</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -343,7 +356,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_PNB</defName>
     <label>injected pnb product 16</label>
-    <description>Temporary pharmaceutical effects from PNB Product 16.</description>
+    <description>Heals nonpermanent injuries at 4 HP per game hour; Manipulation capacity +0.15; hunger +10%. A stimulant crash follows.</description>
+    <statusLabel>healing and dexterity</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -367,7 +381,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_eTG</defName>
     <label>injected etg-change</label>
-    <description>Temporary pharmaceutical effects from eTG-change.</description>
+    <description>Heals nonpermanent injuries at 12 HP per game hour; hunger +15%; rest drain +5%. A stimulant crash follows.</description>
+    <statusLabel>rapid tissue repair</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -386,7 +401,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_P22</defName>
     <label>injected p22 product 22</label>
-    <description>Temporary pharmaceutical effects from P22 Product 22.</description>
+    <description>Immunity Gain Speed x1.20; Blood Pumping capacity +0.20; pain -20%; rest drain +20%. A stimulant crash follows.</description>
+    <statusLabel>immunity support</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -414,7 +430,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Perfotoran</defName>
     <label>injected perfotoran blue blood</label>
-    <description>Temporary pharmaceutical effects from Perfotoran Blue Blood.</description>
+    <description>Stops bleeding while active without tending wounds; heals nonpermanent injuries at 2 HP per game hour; immediately reduces toxic buildup severity by 0.20. A stimulant crash follows.</description>
+    <statusLabel>clotting and recovery</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -432,7 +449,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_SJ9</defName>
     <label>injected sj9</label>
-    <description>Temporary pharmaceutical effects from SJ9.</description>
+    <description>Sight capacity +0.10; Manipulation -0.15; hunger +10%; rest drain +5%. Note: proposed thermal stealth is not implemented.</description>
+    <statusLabel>vision boost, reduced dexterity</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -461,7 +479,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_SJ12</defName>
     <label>injected sj12</label>
-    <description>Temporary pharmaceutical effects from SJ12.</description>
+    <description>Sight capacity +0.10; rest drain -10%; hunger +25%. A stimulant crash follows.</description>
+    <statusLabel>sustained focus</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -486,7 +505,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_MULE</defName>
     <label>injected m.u.l.e.</label>
-    <description>Temporary pharmaceutical effects from M.U.L.E..</description>
+    <description>Carrying Capacity x1.50 and Moving capacity +0.05. Adds chemical strain at 0.10 severity per game hour while active.</description>
+    <statusLabel>heavy hauling</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -512,7 +532,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Obdolbos</defName>
     <label>injected obdolbos</label>
-    <description>Temporary pharmaceutical effects from Obdolbos.</description>
+    <description>Original Obdolbos randomly selects one of three outcomes: combat surge (Moving +0.35, Sight +0.15, pain -40%), motor boost (Manipulation +0.40, Blood Pumping +0.30), or altered state (Moving +0.10, pain -65%, Consciousness -0.25). All outcomes increase hunger and rest drain. Any overdose while it is active, or during its injection, is instantly fatal.</description>
+    <statusLabel>randomized stimulant effects</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>3</maxSeverity>
@@ -574,7 +595,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_Effect_Obdolbos2</defName>
     <label>injected obdolbos 2</label>
-    <description>Temporary pharmaceutical effects from Obdolbos 2.</description>
+    <description>Carrying Capacity x1.45; Moving +0.15; Sight +0.10; Manipulation +0.10. Consciousness -0.20; hunger +50%; rest drain +40%; chemical strain +0.15 severity per game hour. A stimulant crash follows.</description>
+    <statusLabel>hauling with heavy side effects</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>

@@ -12,6 +12,8 @@ namespace TarkovInjectors
     // This means no joy-use, scheduled drug use, addiction-driven use, or mental-break ingestion.
     public class InjectorEffectDef : HediffDef
     {
+        // A concise health-card descriptor for each active injector effect.
+        public string statusLabel;
         public int durationTicks = 2500;
         public float healHPPerHour = 0f;
         public float toxicBuildupReduction = 0f;

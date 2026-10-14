@@ -38,7 +38,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_StimulantExhaustion</defName>
     <label>stimulant exhaustion</label>
-    <description>After-effects of experimental pharmaceuticals.</description>
+    <description>Stimulant crash: Consciousness capacity -0.20 until this after-effect wears off.</description>
+    <statusLabel>stimulant crash</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>true</isBad>
     <maxSeverity>1</maxSeverity>
@@ -57,7 +58,8 @@
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
     <defName>TCI_ChemicalStrain</defName>
     <label>chemical strain</label>
-    <description>After-effects of experimental pharmaceuticals.</description>
+    <description>Chemical strain from injectors. Blood Pumping capacity -0.10 while active.</description>
+    <statusLabel>chemical strain</statusLabel>
     <hediffClass>TarkovInjectors.Hediff_InjectorEffect</hediffClass>
     <isBad>true</isBad>
     <maxSeverity>2</maxSeverity>

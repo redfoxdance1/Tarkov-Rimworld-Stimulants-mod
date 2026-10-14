@@ -96,3 +96,9 @@ This is an unofficial fan-made adaptation and is not affiliated with Battlestate
 ## October 2026 load failure diagnosis (Player.log)
 
 The submitted RimWorld 1.6.4871 log showed `RecipeDefGenerator.SetIngredients -> ThingFilter.SetAllow` throwing `NullReferenceException`, followed by automatic reset to Core-only mod loading. Later missing texture errors were consistent with assets from the now-unloaded mods not being available. Eight injector recipes incorrectly used `Medicine` as a ThingDef name; vanilla industrial medicine is `MedicineIndustrial`. The definitions were corrected and an ingredient allowlist check was added. Other installed mods may also have invalid recipe references, so the first in-game test should enable only Core and this mod; avoid simultaneously loading the unmodified Elanilda version while diagnosing this issue.
+
+## Health tab effect descriptors (private hybrid feature)
+
+Every active injector appears in a pawn's Health tab with a readable short descriptor and a live in-game-hours-remaining value, e.g. `injected adrenaline (combat surge and healing, 0.8h left)`. Hover for the specific strengths/penalties, healing/toxin/strain rates, and pending exhaustion/crash timer. Obdolbos changes its descriptor with the currently selected random outcome. Untended acute overdose clearly displays `untended, worsening` and changes to `tended, recovering` once stabilized. Stimulant exhaustion and chemical strain also have explicit Health tab descriptions.
+
+The game UI integration uses native Hediff label/tooltip APIs and does not patch the Health tab. All original / borrowed textures remain out of public source control: the private hybrid ZIP is assembled locally by overlaying a passing compiled DLL, definitions, and the user's existing private texture archive.

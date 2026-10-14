@@ -14,6 +14,14 @@ effects = {e.findtext("defName") for e in ET.parse(r / "Defs/Effects.xml").getro
 research = {e.findtext("defName") for e in ET.parse(r / "Defs/Research.xml").getroot()}
 jobs = {e.findtext("defName") for e in ET.parse(r / "Defs/Jobs.xml").getroot()}
 assert len(items) == len(effects) == 22
+# Every active stimulant must communicate its actual behavior in the Health tab.
+for effect in ET.parse(r / "Defs/Effects.xml").getroot():
+    assert effect.findtext("statusLabel", "").strip(), effect.findtext("defName")
+    assert len(effect.findtext("description", "").strip()) > 45, effect.findtext("defName")
+for effect in ET.parse(r / "Defs/MedicalConditions.xml").getroot():
+    if effect.findtext("defName") in ("TCI_StimulantExhaustion", "TCI_ChemicalStrain"):
+        assert effect.findtext("statusLabel", "").strip()
+
 assert len({e.findtext("defName") for e in items}) == 22
 skills = {"TCI_Basic": 4, "TCI_Combat": 6, "TCI_Advanced": 8, "TCI_Experimental": 10}
 for item in items:
@@ -50,6 +58,11 @@ assert "originalObdolbos" in core and "pawn.Kill(null)" in core
 assert {"TCI_InjectSelf", "TCI_InjectPatient"} <= jobs
 assert "public override void CompTickInterval(int delta)" in core
 assert effects_code.count("public override void TickInterval(int delta)") == 2
+assert effects_code.count("public override string LabelInBrackets") == 2
+assert effects_code.count("public override string TipStringExtra") == 2
+assert 'Settings.statusLabel' in effects_code and 'FormatHours(ticks)' in effects_code
+assert 'untended, worsening' in effects_code and 'tended, recovering' in effects_code
+assert 'public string statusLabel;' in core
 assert "Severity += stabilized ? -0.005f : 0.01f" in effects_code
 assert "FloatMenuOptionProvider_InjectorPickup : FloatMenuOptionProvider" in pickup
 assert "clickedThing.TryGetComp<CompInjector>()" in pickup
