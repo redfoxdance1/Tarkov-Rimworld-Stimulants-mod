@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationAdd">
+  <!-- Handle both vanilla Human defs with and without an existing comps list. -->
+  <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName="Human"]/comps</xpath>
-    <value>
-      <li Class="TarkovInjectors.CompProperties_InjectorController"/>
-    </value>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Human"]/comps</xpath>
+      <value>
+        <li Class="TarkovInjectors.CompProperties_InjectorController"/>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Human"]</xpath>
+      <value>
+        <comps>
+          <li Class="TarkovInjectors.CompProperties_InjectorController"/>
+        </comps>
+      </value>
+    </nomatch>
   </Operation>
 </Patch>

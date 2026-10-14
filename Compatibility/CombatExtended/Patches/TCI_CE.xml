@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Loaded only when Combat Extended is active via LoadFolders.xml. -->
+<Patch>
+  <!-- CE uses independent weight and bulk limits. Keep vanilla modifiers intact. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="TCI_Effect_2A2bTG"]/stages/li[1]/statFactors</xpath>
+    <value>
+      <CarryWeight>1.2</CarryWeight>
+      <CarryBulk>1.2</CarryBulk>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="TCI_Effect_MULE"]/stages/li[1]/statFactors</xpath>
+    <value>
+      <CarryWeight>1.5</CarryWeight>
+      <CarryBulk>1.5</CarryBulk>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="TCI_Effect_Obdolbos2"]/stages/li[1]/statFactors</xpath>
+    <value>
+      <CarryWeight>1.45</CarryWeight>
+      <CarryBulk>1.45</CarryBulk>
+    </value>
+  </Operation>
+  <!-- All 22 syringe defs inherit the base item's bulk when CE is enabled. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="TCI_InjectorBase"]/statBases</xpath>
+    <value>
+      <Bulk>0.1</Bulk>
+    </value>
+  </Operation>
+</Patch>

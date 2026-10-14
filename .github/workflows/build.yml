@@ -1,0 +1,68 @@
+name: RimWorld 1.6 development build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - v0.2-testing
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate XML and definitions
+        run: python Source_Validation.py
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Compile against RimWorld 1.6 reference assemblies
+        run: dotnet build Source/TarkovCombatInjectors.csproj --configuration Release
+
+      - name: Package development mod
+        shell: pwsh
+        run: |
+          if (!(Test-Path Assemblies/TarkovCombatInjectors.dll)) { throw 'Missing compiled DLL' }
+          New-Item -ItemType Directory -Force -Path dist/TarkovCombatInjectors | Out-Null
+          foreach ($folder in @('About', 'Defs', 'Patches', 'Textures', 'Compatibility')) {
+            Copy-Item -Path $folder -Destination dist/TarkovCombatInjectors -Recurse
+          }
+          Copy-Item -Path LoadFolders.xml -Destination dist/TarkovCombatInjectors/
+          New-Item -ItemType Directory -Force -Path dist/TarkovCombatInjectors/Assemblies | Out-Null
+          Copy-Item Assemblies/TarkovCombatInjectors.dll dist/TarkovCombatInjectors/Assemblies/
+
+      - name: Verify compiled mod package
+        shell: pwsh
+        run: |
+          $mod = 'dist/TarkovCombatInjectors'
+          $needed = @('About/About.xml', 'LoadFolders.xml', 'Assemblies/TarkovCombatInjectors.dll', 'Defs/Injectors.xml', 'Defs/Effects.xml', 'Defs/MedicalConditions.xml', 'Compatibility/CombatExtended/Patches/TCI_CE.xml', 'Patches/ColonistController.xml')
+          foreach ($file in $needed) {
+            if (!(Test-Path (Join-Path $mod $file))) { throw "Package missing $file" }
+          }
+          $pngs = @(Get-ChildItem (Join-Path $mod 'Textures') -Filter '*.png' -File -Recurse)
+          if ($pngs.Count -ne 23) { throw "Expected 23 PNGs but packaged $($pngs.Count)" }
+          $dll = (Get-Item (Join-Path $mod 'Assemblies/TarkovCombatInjectors.dll')).Length
+          if ($dll -lt 10000) { throw "Invalid or suspiciously small compiled DLL ($dll bytes)" }
+          Write-Host "Verified package: $($pngs.Count) textures, $dll-byte DLL, XML and CE folders."
+
+      - name: Upload development mod ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: TarkovCombatInjectors-v0.2-testing
+          path: dist/
+          if-no-files-found: error

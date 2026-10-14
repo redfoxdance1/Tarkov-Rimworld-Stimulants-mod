@@ -48,10 +48,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -78,10 +81,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -108,16 +114,19 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <MedicineHerbal>1</MedicineHerbal>
     </costList>
   </ThingDef>
@@ -139,16 +148,19 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <MedicineHerbal>2</MedicineHerbal>
     </costList>
   </ThingDef>
@@ -170,16 +182,19 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <Cloth>1</Cloth>
     </costList>
   </ThingDef>
@@ -201,10 +216,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Basic</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -231,10 +249,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -262,10 +283,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -292,10 +316,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -322,10 +349,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -353,10 +383,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -384,10 +417,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -415,17 +451,20 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>3</Neutroamine>
       <WakeUp>1</WakeUp>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="TCI_InjectorBase">
@@ -446,17 +485,20 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Combat</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>3</Neutroamine>
       <GoJuice>1</GoJuice>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="TCI_InjectorBase">
@@ -477,10 +519,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -507,16 +552,19 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>3</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <WakeUp>1</WakeUp>
     </costList>
   </ThingDef>
@@ -538,16 +586,19 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>3</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <Penoxycyline>1</Penoxycyline>
     </costList>
   </ThingDef>
@@ -569,10 +620,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -600,10 +654,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -631,17 +688,20 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Advanced</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
       <Neutroamine>4</Neutroamine>
       <GoJuice>1</GoJuice>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="TCI_InjectorBase">
@@ -664,10 +724,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Experimental</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>10</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -696,10 +759,13 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>TCI_Experimental</researchPrerequisite>
+      <skillRequirements>
+        <Intellectual>10</Intellectual>
+      </skillRequirements>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
