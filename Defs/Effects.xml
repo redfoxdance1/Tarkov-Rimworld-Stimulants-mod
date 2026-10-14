@@ -10,7 +10,6 @@
     <durationTicks>15000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -37,7 +36,6 @@
     <durationTicks>2500</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>4</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -68,7 +66,6 @@
     <durationTicks>12500</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>2</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -87,11 +84,11 @@
     <durationTicks>7500</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>true</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
       <li>
+        <totalBleedFactor>0</totalBleedFactor>
         <painFactor>0.8</painFactor>
         <hungerRateFactor>1.3</hungerRateFactor>
         <restFallFactor>1.05</restFallFactor>
@@ -108,11 +105,11 @@
     <durationTicks>5000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>true</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
       <li>
+        <totalBleedFactor>0</totalBleedFactor>
         <hungerRateFactor>1.25</hungerRateFactor>
       </li>
     </stages>
@@ -127,7 +124,6 @@
     <durationTicks>7500</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0.5</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -151,7 +147,6 @@
     <durationTicks>10000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -182,7 +177,6 @@
     <durationTicks>12500</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -212,7 +206,6 @@
     <durationTicks>7500</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -242,7 +235,6 @@
     <durationTicks>10000</durationTicks>
     <crashDurationTicks>10000</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -273,7 +265,6 @@
     <durationTicks>30000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -303,7 +294,6 @@
     <durationTicks>10000</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -333,7 +323,6 @@
     <durationTicks>30000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -361,7 +350,6 @@
     <durationTicks>5000</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>4</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -386,7 +374,6 @@
     <durationTicks>5000</durationTicks>
     <crashDurationTicks>7500</crashDurationTicks>
     <healHPPerHour>12</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -406,7 +393,6 @@
     <durationTicks>7500</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -435,11 +421,12 @@
     <durationTicks>7500</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>2</healHPPerHour>
-    <clotBleeding>true</clotBleeding>
     <toxicBuildupReduction>0.2</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
-      <li/>
+      <li>
+        <totalBleedFactor>0</totalBleedFactor>
+      </li>
     </stages>
   </HediffDef>
   <HediffDef Class="TarkovInjectors.InjectorEffectDef">
@@ -452,7 +439,6 @@
     <durationTicks>12500</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -482,7 +468,6 @@
     <durationTicks>20000</durationTicks>
     <crashDurationTicks>5000</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -508,7 +493,6 @@
     <durationTicks>30000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0.1</strainPerHour>
     <stages>
@@ -535,7 +519,6 @@
     <durationTicks>15000</durationTicks>
     <crashDurationTicks>0</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0</strainPerHour>
     <stages>
@@ -598,7 +581,6 @@
     <durationTicks>40000</durationTicks>
     <crashDurationTicks>7500</crashDurationTicks>
     <healHPPerHour>0</healHPPerHour>
-    <clotBleeding>false</clotBleeding>
     <toxicBuildupReduction>0</toxicBuildupReduction>
     <strainPerHour>0.15</strainPerHour>
     <stages>

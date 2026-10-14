@@ -59,9 +59,9 @@ You can run `python Source_Validation.py` to validate the basic source structure
 
 - **Not compiled or playtested.** C# calls and some XML defs may need correction against the RimWorld 1.6 game assemblies. The new manual pickup UI uses RimWorld 1.6's native `FloatMenuOptionProvider`, `JobDefOf.TakeInventory`, and inventory mass checks, but remains unverified in-game.
 - SJ9 thermal stealth does not yet alter enemy targeting AI.
-- M.U.L.E. and 2A2 use carrying-capacity stat modifiers; not every inventory/caravan mass calculation is covered.
-- Bleeding prevention currently uses vanilla wound tending rather than a separate clotting hediff.
-- Doctor administration and saving/loading all related states still need real-game verification.
+- M.U.L.E., 2A2 and Obdolbos 2 gain Combat Extended `CarryWeight` and `CarryBulk` multipliers only when CE is loaded. Other modded inventory calculations remain unverified.
+- Bleeding suppression uses vanilla `totalBleedFactor=0` while a compatible injector effect remains active. It does not automatically tend or heal injuries.
+- Doctor administration, bed interactions and save/load remain in need of real-game testing; interrupted injections now fail without consuming doses.
 - No official EFT imagery, sound, or game assemblies are redistributed.
 
 ## Project status
@@ -77,3 +77,10 @@ This is an unofficial fan-made adaptation and is not affiliated with Battlestate
 - On a successful run, open the **Actions** tab, select the workflow run, and download the **TarkovCombatInjectors-v0.2-testing** artifact. Extract the ZIP into your local RimWorld `Mods` folder for first-run testing.
 - v0.2 changes: 1.6 interval-aware ticking, corrected 4-hour untreated overdose window, resilience for missing Human `comps` XML, crafting skill thresholds, and a pre-destruction injector label snapshot.
 - The next verification step is to fix any compiler diagnostics returned by CI; compile success does not prove runtime compatibility.
+
+## Reference-driven bug fixes (v0.2-testing)
+
+- Replaced perfect-quality automatic tending from bleeding injectors with native `totalBleedFactor=0`, inspired by Elanilda's public [EL] Stims from EFT implementation. This suppresses blood loss while active without falsely tending every injury.
+- Injection jobs revalidate the patient, injector ownership and incapacitation while executing. Bed patients use an interaction cell; progress bars show completion time. Interrupted jobs do not consume an injector.
+- Optional CE compatibility loads only with `CETeam.CombatExtended`: 0.1 Bulk per syringe and CarryWeight/CarryBulk multipliers for M.U.L.E., 2A2 and Obdolbos 2. No CE assembly reference is required.
+- These changes use independently authored code; [Elanilda's source](https://github.com/Elanilda/-EL-Stims-from-EFT) was used as a technical reference.

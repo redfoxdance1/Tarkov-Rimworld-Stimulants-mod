@@ -25,7 +25,6 @@ namespace TarkovInjectors
             if (Settings != null)
             {
                 RemoveToxin(Settings.toxicBuildupReduction);
-                if (Settings.clotBleeding) ClotWounds();
             }
         }
 
@@ -43,7 +42,6 @@ namespace TarkovInjectors
             {
                 pulseTicks -= 250;
                 if (Settings.healHPPerHour > 0f) HealInjuries(Settings.healHPPerHour / 10f);
-                if (Settings.clotBleeding) ClotWounds();
                 if (Settings.strainPerHour > 0f) ApplyStrain(Settings.strainPerHour / 10f);
             }
             if (remainingTicks <= 0)
@@ -74,14 +72,6 @@ namespace TarkovInjectors
                 injury.Heal(healed);
                 points -= healed;
             }
-        }
-
-        private void ClotWounds()
-        {
-            // This intentionally uses the vanilla wound-tending path: prevents bleeding
-            // without replacing lost blood. New bleeding wounds are caught next pulse.
-            foreach (Hediff_Injury injury in pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>().ToList())
-                if (injury.Bleeding && injury.TendableNow()) injury.Tended(1f, 1f);
         }
 
         private void RemoveToxin(float amount)

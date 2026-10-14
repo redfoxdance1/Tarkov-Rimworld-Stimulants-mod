@@ -14,7 +14,6 @@ namespace TarkovInjectors
     {
         public int durationTicks = 2500;
         public float healHPPerHour = 0f;
-        public bool clotBleeding = false;
         public float toxicBuildupReduction = 0f;
         public float strainPerHour = 0f;
         public int crashDurationTicks = 0;
@@ -125,7 +124,14 @@ namespace TarkovInjectors
             bool fatal = IsObdolbosActive() || injection.InjectorProps.originalObdolbos;
             Action start = () =>
             {
-                Job job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("TCI_InjectPatient"), Pawn, syringe);
+                Pawn patient = Pawn;
+                if (patient == null || !patient.Spawned || patient.Dead || !patient.Downed ||
+                    doctor == null || doctor.Dead || doctor.Downed || doctor.jobs == null ||
+                    doctor.inventory == null || syringe == null || syringe.Destroyed ||
+                    !doctor.inventory.innerContainer.Contains(syringe) ||
+                    !doctor.CanReach(patient, PathEndMode.ClosestTouch, Danger.Deadly) ||
+                    !doctor.CanReserve(patient)) return;
+                Job job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("TCI_InjectPatient"), patient, syringe);
                 doctor.jobs.TryTakeOrderedJob(job);
             };
             if (NextRisk <= 0f) { start(); return; }
@@ -194,6 +200,7 @@ namespace TarkovInjectors
             if (pawn == null || pawn.Dead || (pawn.Downed && administrator == null) || injection == null ||
                 source == null || source.inventory == null || !source.inventory.innerContainer.Contains(item)) return;
             bool fatal = IsObdolbosActive() || injection.InjectorProps.originalObdolbos;
+            bool randomObdolbos = injection.InjectorProps.randomObdolbos;
             HediffDef effect = injection.InjectorProps.effect;
             if (effect == null) return;
 
@@ -220,7 +227,7 @@ namespace TarkovInjectors
             if (existing != null) pawn.health.RemoveHediff(existing); // Refresh, never stack duplicates.
             Hediff applied = pawn.health.AddHediff(effect);
             if (applied is Hediff_InjectorEffect active) active.OnInjected();
-            if (injection.InjectorProps.randomObdolbos)
+            if (randomObdolbos)
             {
                 applied.Severity = Rand.Range(0, 3) + 0.1f; // randomized stage
                 // No second unadvertised death roll: the shared stimulant risk controls overdoses.
@@ -240,43 +247,79 @@ namespace TarkovInjectors
         }
     }
 
+    // Keep every external condition under review until the dose is actually administered.
+    // Cancelling a job must neither consume the syringe nor increment stimulant load.
     public class JobDriver_InjectPatient : JobDriver
     {
+        private Pawn Patient => job.targetA.Thing as Pawn;
+        private Thing Syringe => job.targetB.Thing;
+
+        private bool CanContinue()
+        {
+            return pawn != null && !pawn.Dead && !pawn.Downed &&
+                   pawn.inventory != null && pawn.health.capacities.GetLevel(PawnCapacityDefOf.Manipulation) > 0f &&
+                   Patient != null && Patient.Spawned && !Patient.Dead && Patient.Downed &&
+                   Patient.TryGetComp<CompInjectorController>() != null &&
+                   Syringe != null && !Syringe.Destroyed && Syringe.stackCount > 0 &&
+                   Syringe.TryGetComp<CompInjector>() != null &&
+                   pawn.inventory.innerContainer.Contains(Syringe);
+        }
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
         }
+
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            yield return Toils_General.Wait(180);
-            Toil apply = new Toil();
-            apply.initAction = () =>
+            this.FailOn(() => !CanContinue());
+
+            // Bedside injections need the bed's interaction cell, not the patient's own cell.
+            PathEndMode pathEnd = Patient != null && Patient.InBed()
+                ? PathEndMode.InteractionCell : PathEndMode.ClosestTouch;
+            yield return Toils_Goto.GotoThing(TargetIndex.A, pathEnd);
+
+            Toil wait = Toils_General.Wait(180);
+            wait.WithProgressBarToilDelay(TargetIndex.A);
+            yield return wait;
+
+            yield return Toils_General.Do(() =>
             {
-                Pawn patient = job.targetA.Thing as Pawn;
-                if (patient == null || patient.Dead || pawn.Dead || pawn.Downed) return;
-                CompInjectorController controller = patient.TryGetComp<CompInjectorController>();
-                if (controller != null) controller.CompleteInjection(job.targetB.Thing, pawn);
-            };
-            apply.defaultCompleteMode = ToilCompleteMode.Instant;
-            yield return apply;
+                if (!CanContinue()) return;
+                CompInjectorController controller = Patient.TryGetComp<CompInjectorController>();
+                if (controller != null) controller.CompleteInjection(Syringe, pawn);
+            });
         }
     }
 
     public class JobDriver_InjectSelf : JobDriver
     {
+        private Thing Syringe => job.targetA.Thing;
+
+        private bool CanContinue()
+        {
+            return pawn != null && !pawn.Dead && !pawn.Downed && pawn.inventory != null &&
+                   pawn.health.capacities.GetLevel(PawnCapacityDefOf.Manipulation) > 0f &&
+                   Syringe != null && !Syringe.Destroyed && Syringe.stackCount > 0 &&
+                   Syringe.TryGetComp<CompInjector>() != null &&
+                   pawn.inventory.innerContainer.Contains(Syringe);
+        }
+
         public override bool TryMakePreToilReservations(bool errorOnFailed) { return true; }
+
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_General.Wait(120); // about 2 real seconds at normal speed
-            Toil apply = new Toil();
-            apply.initAction = () =>
+            this.FailOn(() => !CanContinue());
+            Toil wait = Toils_General.Wait(120);
+            wait.WithProgressBarToilDelay(TargetIndex.A);
+            yield return wait;
+
+            yield return Toils_General.Do(() =>
             {
+                if (!CanContinue()) return;
                 CompInjectorController controller = pawn.TryGetComp<CompInjectorController>();
-                if (controller != null && !pawn.Downed) controller.CompleteInjection(job.targetA.Thing);
-            };
-            apply.defaultCompleteMode = ToilCompleteMode.Instant;
-            yield return apply;
+                if (controller != null) controller.CompleteInjection(Syringe);
+            });
         }
     }
 }

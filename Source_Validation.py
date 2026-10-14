@@ -5,7 +5,7 @@ from xml.etree import ElementTree as ET
 from math import isclose
 
 r = Path(__file__).parent
-files = list((r / "About").rglob("*.xml")) + list((r / "Defs").rglob("*.xml")) + list((r / "Patches").rglob("*.xml"))
+files = list((r / "About").rglob("*.xml")) + list((r / "Defs").rglob("*.xml")) + list((r / "Patches").rglob("*.xml")) + list((r / "Compatibility").rglob("*.xml")) + [r / "LoadFolders.xml"]
 for f in files:
     ET.parse(f)
 
@@ -46,4 +46,21 @@ assert "JobDefOf.TakeInventory" in pickup
 assert "job.checkEncumbrance = true" in pickup
 assert "Dialog_Slider" in pickup
 assert "requestedCount > maxCount" in pickup
+# All three anti-bleeding effects must suppress bleeding without automatically tending injuries.
+effect_nodes = {e.findtext("defName"): e for e in ET.parse(r / "Defs/Effects.xml").getroot()}
+for name in ("Zagustin", "AHF1M", "Perfotoran"):
+    node = effect_nodes["TCI_Effect_" + name]
+    assert node.findtext("stages/li/totalBleedFactor") == "0", name
+assert "<clotBleeding>" not in (r / "Defs/Effects.xml").read_text(encoding="utf-8")
+assert "ClotWounds" not in effects_code and "injury.Tended(" not in effects_code
+
+# Never complete interrupted injections or administer an item removed from inventory.
+assert core.count("this.FailOn(() => !CanContinue())") == 2
+assert core.count("pawn.inventory.innerContainer.Contains(Syringe)") == 2
+assert "Patient.InBed()" in core
+assert "WithProgressBarToilDelay" in core
+assert (r / "LoadFolders.xml").read_text(encoding="utf-8").count('IfModActive="CETeam.CombatExtended"') == 1
+ce = ET.parse(r / "Compatibility/CombatExtended/Patches/TCI_CE.xml").getroot()
+assert len(ce.findall("Operation")) == 4
+
 print(f"PASS: {len(files)} XML docs, {len(items)} injectors, research/skills, real overdose table, manual pickup, interval timers.")
