@@ -92,3 +92,7 @@ This is an unofficial fan-made adaptation and is not affiliated with Battlestate
 - If RimWorld displays errors, capture its `Player.log` (on Windows: `%USERPROFILE%/AppData/LocalLow/Ludeon Studios/RimWorld by Ludeon Studios/Player.log`), especially lines referring to `TCI_`, `TarkovInjectors`, or `Tarkov Combat Injectors`.
 - Updated the injector recipe work speed from obsolete `DrugProductionSpeed` to RimWorld 1.6's `DrugSynthesisSpeed` for all 22 drug-lab recipes; static validation now checks this.
 - CI now verifies required mod files, 23 PNG textures, and the compiled DLL before publishing the artifact.
+
+## October 2026 load failure diagnosis (Player.log)
+
+The submitted RimWorld 1.6.4871 log showed `RecipeDefGenerator.SetIngredients -> ThingFilter.SetAllow` throwing `NullReferenceException`, followed by automatic reset to Core-only mod loading. Later missing texture errors were consistent with assets from the now-unloaded mods not being available. Eight injector recipes incorrectly used `Medicine` as a ThingDef name; vanilla industrial medicine is `MedicineIndustrial`. The definitions were corrected and an ingredient allowlist check was added. Other installed mods may also have invalid recipe references, so the first in-game test should enable only Core and this mod; avoid simultaneously loading the unmodified Elanilda version while diagnosing this issue.

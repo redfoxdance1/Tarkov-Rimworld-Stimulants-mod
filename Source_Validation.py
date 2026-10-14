@@ -25,6 +25,17 @@ for item in items:
     assert int(item.findtext("recipeMaker/skillRequirements/Intellectual")) == skills[tier], name
     assert item.find("costList/Neutroamine") is not None, name
     assert item.find("ingestible") is None, name
+    # The RimWorld 1.6 recipe generator crashes before play data loads if a
+    # costList entry refers to an unknown ThingDef. Validate known Core names.
+    vanilla_ingredients = {
+        "Neutroamine", "MedicineHerbal", "MedicineIndustrial",
+        "MedicineUltratech", "Cloth", "Yayo", "WakeUp",
+        "GoJuice", "Penoxycyline", "Chemfuel",
+    }
+    ingredient_names = {ingredient.tag for ingredient in item.find("costList")}
+    assert ingredient_names <= vanilla_ingredients, (name, ingredient_names - vanilla_ingredients)
+    assert "Medicine" not in ingredient_names, name
+
     assert item.findtext("recipeMaker/workSpeedStat") == "DrugSynthesisSpeed", name
 
 core = (r / "Source/InjectorCore.cs").read_text(encoding="utf-8")
@@ -48,6 +59,7 @@ assert "job.checkEncumbrance = true" in pickup
 assert "Dialog_Slider" in pickup
 # Prevent obsolete stat references from silently breaking all generated drug-lab recipes.
 assert "DrugProductionSpeed" not in (r / "Defs/Injectors.xml").read_text(encoding="utf-8")
+assert "<Medicine>" not in (r / "Defs/Injectors.xml").read_text(encoding="utf-8")
 assert "requestedCount > maxCount" in pickup
 # All three anti-bleeding effects must suppress bleeding without automatically tending injuries.
 effect_nodes = {e.findtext("defName"): e for e in ET.parse(r / "Defs/Effects.xml").getroot()}

@@ -126,7 +126,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <MedicineHerbal>1</MedicineHerbal>
     </costList>
   </ThingDef>
@@ -160,7 +160,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <MedicineHerbal>2</MedicineHerbal>
     </costList>
   </ThingDef>
@@ -194,7 +194,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <Cloth>1</Cloth>
     </costList>
   </ThingDef>
@@ -464,7 +464,7 @@
     <costList>
       <Neutroamine>3</Neutroamine>
       <WakeUp>1</WakeUp>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="TCI_InjectorBase">
@@ -498,7 +498,7 @@
     <costList>
       <Neutroamine>3</Neutroamine>
       <GoJuice>1</GoJuice>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="TCI_InjectorBase">
@@ -564,7 +564,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>3</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <WakeUp>1</WakeUp>
     </costList>
   </ThingDef>
@@ -598,7 +598,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>3</Neutroamine>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
       <Penoxycyline>1</Penoxycyline>
     </costList>
   </ThingDef>
@@ -701,7 +701,7 @@
     <costList>
       <Neutroamine>4</Neutroamine>
       <GoJuice>1</GoJuice>
-      <Medicine>1</Medicine>
+      <MedicineIndustrial>1</MedicineIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="TCI_InjectorBase">
