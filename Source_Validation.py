@@ -62,5 +62,7 @@ assert "WithProgressBarToilDelay" in core
 assert (r / "LoadFolders.xml").read_text(encoding="utf-8").count('IfModActive="CETeam.CombatExtended"') == 1
 ce = ET.parse(r / "Compatibility/CombatExtended/Patches/TCI_CE.xml").getroot()
 assert len(ce.findall("Operation")) == 4
+workflow = (r / ".github/workflows/build.yml").read_text(encoding="utf-8")
+assert "'Compatibility'" in workflow and "Copy-Item -Path LoadFolders.xml" in workflow
 
 print(f"PASS: {len(files)} XML docs, {len(items)} injectors, research/skills, real overdose table, manual pickup, interval timers.")
