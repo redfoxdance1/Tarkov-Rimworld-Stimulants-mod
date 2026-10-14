@@ -25,6 +25,7 @@ for item in items:
     assert int(item.findtext("recipeMaker/skillRequirements/Intellectual")) == skills[tier], name
     assert item.find("costList/Neutroamine") is not None, name
     assert item.find("ingestible") is None, name
+    assert item.findtext("recipeMaker/workSpeedStat") == "DrugSynthesisSpeed", name
 
 core = (r / "Source/InjectorCore.cs").read_text(encoding="utf-8")
 effects_code = (r / "Source/InjectorHediffs.cs").read_text(encoding="utf-8")
@@ -45,6 +46,8 @@ assert "pawn.IsColonistPlayerControlled" in pickup
 assert "JobDefOf.TakeInventory" in pickup
 assert "job.checkEncumbrance = true" in pickup
 assert "Dialog_Slider" in pickup
+# Prevent obsolete stat references from silently breaking all generated drug-lab recipes.
+assert "DrugProductionSpeed" not in (r / "Defs/Injectors.xml").read_text(encoding="utf-8")
 assert "requestedCount > maxCount" in pickup
 # All three anti-bleeding effects must suppress bleeding without automatically tending injuries.
 effect_nodes = {e.findtext("defName"): e for e in ET.parse(r / "Defs/Effects.xml").getroot()}

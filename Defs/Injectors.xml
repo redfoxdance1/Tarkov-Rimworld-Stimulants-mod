@@ -54,7 +54,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -87,7 +87,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -120,7 +120,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -154,7 +154,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -188,7 +188,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -222,7 +222,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -255,7 +255,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -289,7 +289,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -322,7 +322,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -355,7 +355,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -389,7 +389,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -423,7 +423,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -457,7 +457,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -491,7 +491,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -525,7 +525,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -558,7 +558,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -592,7 +592,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -626,7 +626,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -660,7 +660,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -694,7 +694,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -730,7 +730,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
@@ -765,7 +765,7 @@
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>

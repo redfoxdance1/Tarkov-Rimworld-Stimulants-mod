@@ -2,7 +2,7 @@
 
 **v0.2 testing candidate** targeting **RimWorld 1.6**. The `v0.2-testing` branch includes a CI compiler build; do not use an important colony save until compilation succeeds and playtesting is complete.
 
-An unofficial RimWorld mod prototype adapting 22 Escape from Tarkov-style tactical injectors into colony medicine, combat, and survival. This repository contains the **source files and original placeholder syringe artwork**, but **does not yet contain a compiled DLL**. Do not install it into an important save until it compiles and passes in-game testing.
+An unofficial RimWorld mod prototype adapting 22 Escape from Tarkov-style tactical injectors into colony medicine, combat, and survival. This repository contains the **source files and original placeholder syringe artwork**, and a CI-produced compiled test artifact. The repository source checkout does not include the DLL; download the latest passing Actions artifact for gameplay tests.
 
 ## Features included in the source
 
@@ -57,7 +57,7 @@ You can run `python Source_Validation.py` to validate the basic source structure
 
 ## Known prototype limitations
 
-- **Not compiled or playtested.** C# calls and some XML defs may need correction against the RimWorld 1.6 game assemblies. The new manual pickup UI uses RimWorld 1.6's native `FloatMenuOptionProvider`, `JobDefOf.TakeInventory`, and inventory mass checks, but remains unverified in-game.
+- **Successfully compiled, not yet playtested.** C# calls and some XML defs may still require testing against a running RimWorld 1.6 instance. The new manual pickup UI uses RimWorld 1.6's native `FloatMenuOptionProvider`, `JobDefOf.TakeInventory`, and inventory mass checks, but remains unverified in-game.
 - SJ9 thermal stealth does not yet alter enemy targeting AI.
 - M.U.L.E., 2A2 and Obdolbos 2 gain Combat Extended `CarryWeight` and `CarryBulk` multipliers only when CE is loaded. Other modded inventory calculations remain unverified.
 - Bleeding suppression uses vanilla `totalBleedFactor=0` while a compatible injector effect remains active. It does not automatically tend or heal injuries.
@@ -84,3 +84,11 @@ This is an unofficial fan-made adaptation and is not affiliated with Battlestate
 - Injection jobs revalidate the patient, injector ownership and incapacitation while executing. Bed patients use an interaction cell; progress bars show completion time. Interrupted jobs do not consume an injector.
 - Optional CE compatibility loads only with `CETeam.CombatExtended`: 0.1 Bulk per syringe and CarryWeight/CarryBulk multipliers for M.U.L.E., 2A2 and Obdolbos 2. No CE assembly reference is required.
 - These changes use independently authored code; [Elanilda's source](https://github.com/Elanilda/-EL-Stims-from-EFT) was used as a technical reference.
+
+## Corrupt-download and startup-error checklist
+
+- The **GitHub Actions artifact is already a ZIP**. Extract it once; the folder placed in `RimWorld/Mods` must contain `About/About.xml`, `Defs`, `Textures`, `LoadFolders.xml`, and `Assemblies/TarkovCombatInjectors.dll` at its root.
+- Do not rename a GitHub HTML download page to `.zip`, and never disable browser malware protection to install a mod. The release can also be checked with a standard ZIP integrity test before extraction.
+- If RimWorld displays errors, capture its `Player.log` (on Windows: `%USERPROFILE%/AppData/LocalLow/Ludeon Studios/RimWorld by Ludeon Studios/Player.log`), especially lines referring to `TCI_`, `TarkovInjectors`, or `Tarkov Combat Injectors`.
+- Updated the injector recipe work speed from obsolete `DrugProductionSpeed` to RimWorld 1.6's `DrugSynthesisSpeed` for all 22 drug-lab recipes; static validation now checks this.
+- CI now verifies required mod files, 23 PNG textures, and the compiled DLL before publishing the artifact.

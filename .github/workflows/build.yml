@@ -46,6 +46,20 @@ jobs:
           New-Item -ItemType Directory -Force -Path dist/TarkovCombatInjectors/Assemblies | Out-Null
           Copy-Item Assemblies/TarkovCombatInjectors.dll dist/TarkovCombatInjectors/Assemblies/
 
+      - name: Verify compiled mod package
+        shell: pwsh
+        run: |
+          $mod = 'dist/TarkovCombatInjectors'
+          $needed = @('About/About.xml', 'LoadFolders.xml', 'Assemblies/TarkovCombatInjectors.dll', 'Defs/Injectors.xml', 'Defs/Effects.xml', 'Defs/MedicalConditions.xml', 'Compatibility/CombatExtended/Patches/TCI_CE.xml', 'Patches/ColonistController.xml')
+          foreach ($file in $needed) {
+            if (!(Test-Path (Join-Path $mod $file))) { throw "Package missing $file" }
+          }
+          $pngs = @(Get-ChildItem (Join-Path $mod 'Textures') -Filter '*.png' -File -Recurse)
+          if ($pngs.Count -ne 23) { throw "Expected 23 PNGs but packaged $($pngs.Count)" }
+          $dll = (Get-Item (Join-Path $mod 'Assemblies/TarkovCombatInjectors.dll')).Length
+          if ($dll -lt 10000) { throw "Invalid or suspiciously small compiled DLL ($dll bytes)" }
+          Write-Host "Verified package: $($pngs.Count) textures, $dll-byte DLL, XML and CE folders."
+
       - name: Upload development mod ZIP
         uses: actions/upload-artifact@v4
         with:
